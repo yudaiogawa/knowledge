@@ -6,8 +6,12 @@ import play.api.mvc.{Action, AnyContent, Controller, Request}
 
 class HelloController @Inject()(val messagesApi: MessagesApi) extends Controller with I18nSupport {
 
+  val logger = play.api.Logger("hello")
+
   def get(name: Option[String]) =
     Action { implicit request: Request[AnyContent] =>
+      logger.info(s"name parameter: $name")
+
       Ok {
         name
           .map(s => Messages("hello", s))
