@@ -6,20 +6,20 @@ import play.api.test.Helpers._
 
 class HelloControllerSpec extends PlaySpec {
 
-  def controller = new HelloController(stubControllerComponents())
+  def controller = new HelloController(stubMessagesApi())
 
   "get" should {
     "path a name" in {
-      val name = "namae"
+      val name = "anonymous"
       val result = controller.get(Some(name))(FakeRequest())
       assert(status(result) === 200)
-      assert(contentAsString(result) === s"Hello, $name :)")
+      assert(contentAsString(result) === "hello")
     }
 
     "not path a name" in {
     val result = controller.get(None)(FakeRequest())
     assert(status(result) === 200)
-    assert(contentAsString(result) === "Please give a name")
+    assert(contentAsString(result) === "noQuery")
     }
   }
 }
