@@ -1,2 +1,11 @@
 hello = {0}さん、こんにちは！
 noQuery = 名前はnameというクエリパラメータで与えてください
+
+textBoard.title = 掲示板
+textBoard.dateTime = 日
+textBoard.dateFormat = yyyy年MM月dd日 HH:mm:ss
+textBoard.message = メッセージ
+textBoard.send = 送信
+
+error.minLength = メッセージを入力してください
+error.maxLength = メッセージが長すぎます
