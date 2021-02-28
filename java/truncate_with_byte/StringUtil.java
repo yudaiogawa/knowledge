@@ -1,3 +1,5 @@
+package truncate_with_byte;
+
 import java.nio.ByteBuffer;
 import java.nio.CharBuffer;
 import java.nio.charset.Charset;

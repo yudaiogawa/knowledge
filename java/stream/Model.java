@@ -1,3 +1,5 @@
+package stream;
+
 class Model {
 
   private String name;

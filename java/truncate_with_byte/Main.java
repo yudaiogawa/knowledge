@@ -1,3 +1,5 @@
+package truncate_with_byte;
+
 public class Main {
 
   public static void main(String[] args) {
