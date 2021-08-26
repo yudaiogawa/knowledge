@@ -1,23 +1,32 @@
+
 # Impdp
 
 Data Pump Import.
 
-<br>
+## Tips
 
-#### テーブル
+import into table.
 
 ```bash
-impdp user/pass@DB directory=directory_object dumpfile=foobar.dmp logfile=foobar.log tables=QISLOGI.%
+impdp user/pass@DB directory=directory_object dumpfile=foobar.dmp logfile=foobar.log tables=SCHEHA.%
 ```
 
-#### スキーマ
+import into schema.
 
 ```bash
 impdp user/pass@DB directory=directory_object dumpfile=foobar.dmp logfile=foobar.log schema=SCOTT
 ```
 
-#### 違うスキーマ
+import into different schema.
 
 ```bash
 impdp user/pass@DB directory=directory_object dumpfile=foobar.dmp logfile=foobar.log remap_schema=SCOTT:ALICE
+```
+
+Stop the impdp
+
+`ctrl+c` を押しまくるのはNG。`ctrl+c` を1回押して、`kill_job` と伝えてあげる。
+
+```bash
+> Import> kill_job
 ```
