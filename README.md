@@ -1,11 +1,5 @@
-<h1 align="center">Knowledge</h1>
-<p align="center">Happy Hacking :)<p>
+Knowledge
 
-<div style="display: flex; align-items: center; justify-content: center;">
-  <img src="_img/hhkb.jpg" width="86%" />
-</div>
+![knowledge](_img/hhkb.jpg "knowledge")
 
-<br>
-<br>
-
-* [Useful Websites](./website.md)
+* [Useful Websites](website.md)
